@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { fireEvent, render, screen } from '@testing-library/react-native';
 import '@testing-library/jest-dom'
 import { QUIZ_CONSTANTS } from '../../constants/quizConstants';
 import QuestionCard from '../QuestionCard';
@@ -15,7 +15,7 @@ describe('QuestionCard', () => {
   it('renders the question text', () => {
     const questionText = question1.question;
     
-    const { getByText } = render(
+    render(
       <QuestionCard
         buttonText="Submit"
         onSelect={onSelectMock}
@@ -26,7 +26,7 @@ describe('QuestionCard', () => {
       />
     );
 
-    expect(getByText(questionText)).toBeTruthy();
+    expect(screen.findByText(questionText)).toBeTruthy();
   });
 
   it('renders the options', () => {
