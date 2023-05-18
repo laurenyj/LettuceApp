@@ -10,4 +10,6 @@ npm install @react-navigation/stack
 npm install @react-navigation/native
 npm install --save prop-types
 npm install react-native-safe-area-view
+
+expo start
 ```
