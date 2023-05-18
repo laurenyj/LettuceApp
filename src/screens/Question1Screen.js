@@ -14,6 +14,8 @@ const Question1Screen = ({ navigation }) => {
     updateQuestionFormState({ [question1.id]: answer })
   };
 
+  console.log("hi")
+
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={require('../../assets/pattern.jpg')} style={styles.appContainer}>

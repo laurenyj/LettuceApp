@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
 import '@testing-library/jest-dom'
-import { QUIZ_CONSTANTS } from '../constants/quizConstants';
+import { QUIZ_CONSTANTS } from '../../constants/quizConstants';
 import QuestionCard from '../QuestionCard';
 
 const question1 = QUIZ_CONSTANTS[0];
