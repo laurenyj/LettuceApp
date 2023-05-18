@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   cardHeaderText: {
-    fontSize: 36,
+    fontSize: 32,
     fontWeight: 'bold',
     textAlign: 'center',
     letterSpacing: 2,
