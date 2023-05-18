@@ -21,7 +21,9 @@ const QuizRoutes = () => {
         <NavigationContainer>
           <QuizStack.Navigator
             initialRouteName="Question1"
-            headerMode='none'
+            screenOptions={{
+              headerShown: false
+            }}
           >
             <QuizStack.Screen
               name="Question1"
