@@ -134,7 +134,9 @@ const styles = StyleSheet.create({
   },
   submitButtonContainer: {
     alignItems: "center",
-    width: '100%'
+    width: '100%',
+    // position: 'absolute',
+    // marginTop: 350
   },
   submitButton: {
     backgroundColor: "#9db1be",

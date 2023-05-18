@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import SafeAreaView from 'react-native-safe-area-view';
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Context as QuestionFormContext } from '../context/QuestionFormContext';
 import QuizHeader from '../components/QuizHeader';
 
@@ -23,6 +23,11 @@ const ResultsScreen = ({ navigation }) => {
     }
   }
 
+  const BEATRIX = require('../../assets/beatrix.png');
+  const RPM = require('../../assets/rpm.png');
+  const HUB51 = require('../../assets/hub51.png');
+  const TALLBOY = require('../../assets/tallboy.png');
+
   const handleSubmit = () => {
     resetQuestionFormState(() => {
       navigation.navigate('Question1')
@@ -37,12 +42,17 @@ const ResultsScreen = ({ navigation }) => {
         <QuizHeader/>
 
         <View style={styles.card}>
-          <Text style={styles.cardHeader}>
-            YOU SHOULD GO TO
-          </Text>
-          <Text style={styles.cardBody}>
-            {calculateResults()}
-          </Text>
+          <View style={styles.cardHeader}>
+            <Text style={styles.cardHeaderText}>
+              {calculateResults()}
+            </Text>
+          </View>
+          <View style={styles.cardBody}>
+            {calculateResults() == "RPM Seafood" && <Image source={RPM} style={styles.image}/>}
+            {calculateResults() == "Hub 51" && <Image source={HUB51} style={styles.image}/>}
+            {calculateResults() == "Beatrix" && <Image source={BEATRIX} style={styles.image}/>}
+            {calculateResults() == "Tallboy" && <Image source={TALLBOY} style={styles.image}/>}
+          </View>
         </View>
 
         <View style={styles.submitButtonContainer}>
@@ -72,19 +82,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     justifyContent: 'center',
     height: '55%',
-  },
-  cardHeader: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    justifyContent: 'center',
-    marginBottom: 30
+    minWidth: '85%',
+    maxWidth: '85%',
   },
   cardBody: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  cardHeaderText: {
     fontSize: 36,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 40,
     letterSpacing: 2,
   },
   submitButtonContainer: {
@@ -105,6 +113,10 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     letterSpacing: 2,
   },
+  image: {
+    height: '80%',
+    width: '80%'
+  }
 })
 
 export default ResultsScreen;
