@@ -14,3 +14,6 @@ npm install react-native-safe-area-context
 
 expo start
 ```
+
+
+https://github.com/laurenyj/LettuceApp/assets/44596134/d82b57ab-4186-4881-94e8-adaec7874037
