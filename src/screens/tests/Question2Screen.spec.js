@@ -4,6 +4,7 @@ import { Context as QuestionFormContext } from '../../context/QuestionFormContex
 import Question2Screen from '../Question2Screen';
 import { QUIZ_CONSTANTS } from '../constants/quizConstants';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const question2 = QUIZ_CONSTANTS[1];
 

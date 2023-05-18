@@ -12,6 +12,7 @@ npm install --save prop-types
 npm install react-native-safe-area-view
 npm install react-native-safe-area-context
 npm install jest-styled-components
+npm install swiper
 
 expo start
 ```
