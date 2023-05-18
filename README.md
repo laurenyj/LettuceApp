@@ -18,8 +18,8 @@ expo start
 ```
 
 TODOs
-> Fix Submit button position relative to card
-> Fix SafeAreaView for different devices
-> Spec tests for Question screens and Results screens
+- Fix Submit button position relative to card
+- Fix SafeAreaView for different devices
+- Spec tests for Question screens and Results screens
 
 https://github.com/laurenyj/LettuceApp/assets/44596134/d82b57ab-4186-4881-94e8-adaec7874037
