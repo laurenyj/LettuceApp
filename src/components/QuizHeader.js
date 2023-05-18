@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const QuizHeader = () => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerTitle}> QUIZ </Text>
+    <View testID="headerContainer" style={styles.header}>
+      <Text testID="headerTitle" style={styles.headerTitle}> QUIZ </Text>
       
-      <Text style={styles.headerText}>
+      <Text testID="headerText" style={styles.headerText}>
         Take our quiz to find out where you should go for dinner.
       </Text>
     </View>
